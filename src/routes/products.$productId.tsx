@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { notFound } from "@tanstack/react-router";
-import { getProductById } from "../lib/products";
+import { getProductById, type Product } from "../lib/products";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/products/$productId")({
