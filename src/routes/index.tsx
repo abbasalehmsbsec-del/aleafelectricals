@@ -16,7 +16,7 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MarkPro Industrial | Ferrule Printing & Labeling Solutions" },
+      { title: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
       {
         name: "description",
         content:
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "MarkPro Industrial | Ferrule Printing & Labeling Solutions",
+        content: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions",
       },
       {
         property: "og:description",
@@ -164,7 +164,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Why Choose MarkPro
+              Why Choose A Leaf
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               We combine precision engineering with reliable service to keep your production lines moving.

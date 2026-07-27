@@ -4,20 +4,20 @@ import { Award, Users, Factory, Globe } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us | MarkPro Industrial" },
+      { title: "About Us | A Leaf Electricals & Electronics" },
       {
         name: "description",
         content:
-          "Learn about MarkPro Industrial — our mission, expertise, and commitment to precision marking solutions.",
+          "Learn about A Leaf Electricals & Electronics — our mission, expertise, and commitment to precision marking solutions.",
       },
       {
         property: "og:title",
-        content: "About Us | MarkPro Industrial",
+        content: "About Us | A Leaf Electricals & Electronics",
       },
       {
         property: "og:description",
         content:
-          "Learn about MarkPro Industrial — our mission, expertise, and commitment to precision marking solutions.",
+          "Learn about A Leaf Electricals & Electronics — our mission, expertise, and commitment to precision marking solutions.",
       },
     ],
   }),
@@ -56,7 +56,7 @@ function AboutPage() {
       <section className="border-b border-border bg-secondary/30">
         <div className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            About MarkPro Industrial
+            About A Leaf Electricals & Electronics
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
             For over 15 years, we have been the trusted partner for electrical contractors, OEMs, and wire harness manufacturers who demand precision, reliability, and expert support.
@@ -97,7 +97,7 @@ function AboutPage() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  MarkPro Industrial was founded with a simple mission: make industrial marking easier, faster, and more reliable. What started as a small supply shop serving local electrical contractors has grown into a global distributor of precision marking equipment.
+                  A Leaf Electricals & Electronics was founded with a simple mission: make industrial marking easier, faster, and more reliable. What started as a small supply shop serving local electrical contractors has grown into a global distributor of precision marking equipment.
                 </p>
                 <p>
                   Today, we partner with leading manufacturers to bring our customers the best ferrule printing machines, label printers, and consumables on the market. Our team combines deep technical knowledge with hands-on industry experience to help you find the right solution for your operation.

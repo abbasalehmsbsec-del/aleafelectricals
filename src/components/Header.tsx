@@ -18,10 +18,16 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 text-foreground">
           <Printer className="h-6 w-6 text-primary" />
-          <span className="font-display text-lg font-bold tracking-tight">
-            MARKPRO
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-base font-bold tracking-tight sm:text-lg">
+              A LEAF
+            </span>
+            <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+              Electricals &amp; Electronics
+            </span>
           </span>
         </Link>
+
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">

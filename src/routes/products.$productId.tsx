@@ -12,14 +12,14 @@ export const Route = createFileRoute("/products/$productId")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.product.name} | MarkPro Industrial` },
+          { title: `${loaderData.product.name} | A Leaf Electricals & Electronics` },
           {
             name: "description",
             content: loaderData.product.description,
           },
           {
             property: "og:title",
-            content: `${loaderData.product.name} | MarkPro Industrial`,
+            content: `${loaderData.product.name} | A Leaf Electricals & Electronics`,
           },
           {
             property: "og:description",
