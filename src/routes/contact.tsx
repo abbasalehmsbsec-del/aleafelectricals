@@ -5,20 +5,20 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us | MarkPro Industrial" },
+      { title: "Contact Us | A Leaf Electricals & Electronics" },
       {
         name: "description",
         content:
-          "Get in touch with MarkPro Industrial for quotes, demos, product support, and sales inquiries.",
+          "Get in touch with A Leaf Electricals & Electronics for quotes, demos, product support, and sales inquiries.",
       },
       {
         property: "og:title",
-        content: "Contact Us | MarkPro Industrial",
+        content: "Contact Us | A Leaf Electricals & Electronics",
       },
       {
         property: "og:description",
         content:
-          "Get in touch with MarkPro Industrial for quotes, demos, product support, and sales inquiries.",
+          "Get in touch with A Leaf Electricals & Electronics for quotes, demos, product support, and sales inquiries.",
       },
     ],
   }),
@@ -35,8 +35,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "sales@markpro-industrial.com",
-    href: "mailto:sales@markpro-industrial.com",
+    value: "sales@aleafelectricals.com",
+    href: "mailto:sales@aleafelectricals.com",
   },
   {
     icon: MapPin,

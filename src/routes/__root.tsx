@@ -79,9 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MarkPro Industrial | Ferrule Printing & Labeling Solutions" },
+      { title: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
       { name: "description", content: "Precision ferrule printing machines, industrial label printers, and consumables for wire harness, cable management, and electrical identification." },
-      { property: "og:title", content: "MarkPro Industrial | Ferrule Printing & Labeling Solutions" },
+      { property: "og:title", content: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
       { property: "og:description", content: "Precision ferrule printing machines, industrial label printers, and consumables for wire harness, cable management, and electrical identification." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

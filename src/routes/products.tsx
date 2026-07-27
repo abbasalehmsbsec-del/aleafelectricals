@@ -1,25 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { products, type ProductCategory } from "../lib/products";
+import { products, brands, type ProductCategory } from "../lib/products";
 import { ChevronRight, Filter } from "lucide-react";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products | MarkPro Industrial" },
+      { title: "Products | A Leaf Electricals & Electronics" },
       {
         name: "description",
         content:
-          "Browse our full range of ferrule printing machines, industrial label printers, and consumables.",
+          "Browse ferrule printing machines, label printers and consumables from Brother, MAX, Canon, CASIO, DYMO, SUPVAN and PUTY.",
       },
       {
         property: "og:title",
-        content: "Products | MarkPro Industrial",
+        content: "Products | A Leaf Electricals & Electronics",
       },
       {
         property: "og:description",
         content:
-          "Browse our full range of ferrule printing machines, industrial label printers, and consumables.",
+          "Browse ferrule printing machines, label printers and consumables from Brother, MAX, Canon, CASIO, DYMO, SUPVAN and PUTY.",
       },
     ],
   }),
@@ -35,11 +35,14 @@ const filters: { key: ProductCategory | "all"; label: string }[] = [
 
 function ProductsPage() {
   const [activeFilter, setActiveFilter] = useState<ProductCategory | "all">("all");
+  const [activeBrand, setActiveBrand] = useState<string>("all");
 
-  const filtered =
-    activeFilter === "all"
-      ? products
-      : products.filter((p) => p.category === activeFilter);
+  const filtered = products.filter(
+    (p) =>
+      (activeFilter === "all" || p.category === activeFilter) &&
+      (activeBrand === "all" || p.brand === activeBrand),
+  );
+
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -70,6 +73,26 @@ function ProductsPage() {
         ))}
       </div>
 
+      {/* Brand filters */}
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+        {["all", ...brands].map((b) => (
+          <button
+            key={b}
+            onClick={() => setActiveBrand(b)}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              activeBrand === b
+                ? "border-primary bg-primary/10 text-primary"
+                : "border-border text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {b === "all" ? "All Brands" : b}
+          </button>
+        ))}
+      </div>
+
+
+
+
       {/* Grid */}
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((product) => (
@@ -86,9 +109,15 @@ function ProductsPage() {
               />
             </div>
             <div className="p-5">
-              <span className="text-xs font-medium uppercase tracking-wider text-primary">
-                {product.categoryLabel}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="rounded border border-border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-foreground">
+                  {product.brand}
+                </span>
+                <span className="text-xs font-medium uppercase tracking-wider text-primary">
+                  {product.categoryLabel}
+                </span>
+              </div>
+
               <h3 className="mt-1 font-display text-lg font-semibold text-foreground">
                 {product.name}
               </h3>

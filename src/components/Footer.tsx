@@ -10,13 +10,19 @@ export function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 text-foreground">
               <Printer className="h-5 w-5 text-primary" />
-              <span className="font-display text-lg font-bold tracking-tight">
-                MARKPRO
+              <span className="flex flex-col leading-tight">
+                <span className="font-display text-lg font-bold tracking-tight">
+                  A LEAF
+                </span>
+                <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+                  Electricals &amp; Electronics
+                </span>
               </span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
-              Precision marking solutions for industrial wire harness, cable management, and identification needs.
+              Authorised supplier of Brother, MAX, Canon, CASIO, DYMO, SUPVAN and PUTY ferrule printing machines, label printers and consumables.
             </p>
+
           </div>
 
           {/* Quick Links */}
@@ -78,7 +84,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>sales@markpro-industrial.com</span>
+                <span>sales@aleafelectricals.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -92,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} MarkPro Industrial. All rights reserved.
+          &copy; {new Date().getFullYear()} A Leaf Electricals & Electronics. All rights reserved.
         </div>
       </div>
     </footer>
