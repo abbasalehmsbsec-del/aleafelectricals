@@ -76,9 +76,15 @@ function ProductDetailPage() {
 
         {/* Info */}
         <div>
-          <span className="text-xs font-medium uppercase tracking-wider text-primary">
-            {product.categoryLabel}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="rounded border border-border px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-foreground">
+              {product.brand}
+            </span>
+            <span className="text-xs font-medium uppercase tracking-wider text-primary">
+              {product.categoryLabel}
+            </span>
+          </div>
+
           <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {product.name}
           </h1>
