@@ -88,6 +88,9 @@ function ProductsPage() {
             {b === "all" ? "All Brands" : b}
           </button>
         ))}
+      </div>
+
+
 
 
       {/* Grid */}
