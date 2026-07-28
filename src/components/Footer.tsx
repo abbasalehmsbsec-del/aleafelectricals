@@ -19,9 +19,6 @@ export function Footer() {
                 </span>
               </span>
             </Link>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Authorised supplier of Brother, MAX, Canon, CASIO, DYMO, SUPVAN and PUTY ferrule printing machines, label printers and consumables.
-            </p>
 
           </div>
 
@@ -34,7 +31,6 @@ export function Footer() {
               {[
                 { to: "/", label: "Home" },
                 { to: "/products", label: "Products" },
-                { to: "/about", label: "About Us" },
                 { to: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.to}>
