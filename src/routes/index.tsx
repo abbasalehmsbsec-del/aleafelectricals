@@ -57,28 +57,6 @@ const categories: { key: ProductCategory; title: string; description: string; ic
   },
 ];
 
-const valueProps = [
-  {
-    icon: Shield,
-    title: "Built to Last",
-    description: "Industrial-grade equipment designed for 24/7 manufacturing environments.",
-  },
-  {
-    icon: HeadphonesIcon,
-    title: "Expert Support",
-    description: "Our technical team provides setup, training, and ongoing maintenance assistance.",
-  },
-  {
-    icon: Truck,
-    title: "Fast Delivery",
-    description: "In-stock machines and consumables ship within 48 hours to minimize downtime.",
-  },
-  {
-    icon: Zap,
-    title: "Precision Engineering",
-    description: "Every product is tested for accuracy, repeatability, and compliance with industry standards.",
-  },
-];
 
 function HomePage() {
   const featured = getFeaturedProducts();
@@ -159,37 +137,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Value Props */}
-      <section className="border-y border-border bg-secondary/30">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Why Choose A Leaf
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              We combine precision engineering with reliable service to keep your production lines moving.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {valueProps.map((prop) => {
-              const Icon = prop.icon;
-              return (
-                <div key={prop.title} className="text-center">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-4 font-display text-lg font-semibold text-foreground">
-                    {prop.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {prop.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Featured Products */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
