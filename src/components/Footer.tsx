@@ -80,19 +80,23 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>+1 (555) 234-5678</span>
+                <span>
+                  +91 91777 52786<br />
+                  +91 63021 74819
+                </span>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>sales@aleafelectricals.com</span>
+                <span>aleafelectricals@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span>
-                  1200 Industrial Parkway<br />
-                  Cleveland, OH 44114
+                  Behind Anjiyah Complex,<br />
+                  Old Bhoiguda, Secunderabad 500003
                 </span>
               </li>
+
             </ul>
           </div>
         </div>

@@ -29,25 +29,31 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 234-5678",
-    href: "tel:+15552345678",
+    value: "+91 91777 52786",
+    href: "tel:+919177752786",
+  },
+  {
+    icon: Phone,
+    label: "Alternate Phone",
+    value: "+91 63021 74819",
+    href: "tel:+916302174819",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "sales@aleafelectricals.com",
-    href: "mailto:sales@aleafelectricals.com",
+    value: "aleafelectricals@gmail.com",
+    href: "mailto:aleafelectricals@gmail.com",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "1200 Industrial Parkway, Cleveland, OH 44114",
+    value: "Behind Anjiyah Complex, Old Bhoiguda, Secunderabad 500003",
     href: undefined,
   },
   {
     icon: Clock,
     label: "Business Hours",
-    value: "Mon–Fri: 8:00 AM – 6:00 PM EST",
+    value: "Mon–Sat: 10:00 AM – 8:00 PM IST",
     href: undefined,
   },
 ];
