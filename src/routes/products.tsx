@@ -31,6 +31,8 @@ const filters: { key: ProductCategory | "all"; label: string }[] = [
   { key: "machines", label: "Ferrule Machines" },
   { key: "printers", label: "Label Printers" },
   { key: "consumables", label: "Consumables" },
+  { key: "agriculture", label: "Agricultural Equipment" },
+
 ];
 
 function ProductsPage() {

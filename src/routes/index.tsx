@@ -4,7 +4,7 @@ import {
   getProductsByCategory,
   type ProductCategory,
 } from "../lib/products";
-import { Printer, ChevronRight, Zap } from "lucide-react";
+import { Printer, ChevronRight, Zap, Sprout } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,10 +45,17 @@ const categories: { key: ProductCategory; title: string; description: string; ic
   {
     key: "consumables",
     title: "Consumables & Accessories",
-    description: "Ferrule sleeves, thermal ribbons, label stock, and replacement parts to keep operations running.",
+    description: "Ferrule sleeves, heat shrink sleeves, thermal ribbons, label tapes and cable ties.",
     icon: ChevronRight,
   },
+  {
+    key: "agriculture",
+    title: "Agricultural Equipment",
+    description: "SAMSON knapsack sprayers, power sprayers, fogging machines, HTP pumps and spares.",
+    icon: Sprout,
+  },
 ];
+
 
 
 function HomePage() {
@@ -102,7 +109,7 @@ function HomePage() {
             Complete solutions for wire harness marking, cable identification, and industrial labeling.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => {
             const count = getProductsByCategory(cat.key).length;
             const Icon = cat.icon;
