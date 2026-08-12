@@ -109,7 +109,7 @@ function HomePage() {
             Complete solutions for wire harness marking, cable identification, and industrial labeling.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => {
             const count = getProductsByCategory(cat.key).length;
             const Icon = cat.icon;
