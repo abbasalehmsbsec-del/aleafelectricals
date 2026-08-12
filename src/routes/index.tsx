@@ -45,10 +45,17 @@ const categories: { key: ProductCategory; title: string; description: string; ic
   {
     key: "consumables",
     title: "Consumables & Accessories",
-    description: "Ferrule sleeves, thermal ribbons, label stock, and replacement parts to keep operations running.",
+    description: "Ferrule sleeves, heat shrink sleeves, thermal ribbons, label tapes and cable ties.",
     icon: ChevronRight,
   },
+  {
+    key: "agriculture",
+    title: "Agricultural Equipment",
+    description: "SAMSON knapsack sprayers, power sprayers, fogging machines, HTP pumps and spares.",
+    icon: Sprout,
+  },
 ];
+
 
 
 function HomePage() {
