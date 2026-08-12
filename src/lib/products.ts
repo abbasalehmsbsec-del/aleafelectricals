@@ -22,6 +22,8 @@ export interface Product {
 const MACHINES = "Ferrule Printing Machines";
 const PRINTERS = "Label Printers";
 const CONSUMABLES = "Consumables";
+const AGRICULTURE = "Agricultural Equipment";
+
 
 export const products: Product[] = [
   /* ---------------- Ferrule printing machines ---------------- */
