@@ -1038,7 +1038,295 @@ export const products: Product[] = [
     },
     featured: false,
   },
+  {
+    id: "ferrule-printing-sleeves",
+    name: "Ferrule Printing Sleeves (PVC Tube)",
+    brand: "A Leaf",
+    category: "consumables",
+    categoryLabel: CONSUMABLES,
+    description:
+      "Soft PVC ferrule sleeves in yellow and white for wire end marking on ferrule printing machines.",
+    longDescription:
+      "Flexible PVC ferrule printing sleeves used for wire and cable end identification in control panels and wire harnesses. Supplied in continuous coils that feed directly into MAX, Canon, SUPVAN and PUTY tube printers, giving clean, permanent thermal transfer marking on every conductor.",
+    image: "/products/ferrule-printing-sleeves.jpg",
+    features: [
+      "Soft PVC tubing for wire end ferrule marking",
+      "Available in yellow and white",
+      "Compatible with MAX, Canon, SUPVAN and PUTY tube printers",
+      "Supplied in continuous coils for automatic feeding",
+      "Smooth surface for sharp, smudge-free print",
+    ],
+    specs: {
+      Type: "PVC ferrule printing sleeve",
+      Colours: "Yellow, White",
+      Application: "Wire and cable end identification",
+      Compatibility: "Ferrule / tube printing machines",
+    },
+    featured: false,
+  },
+  {
+    id: "heat-shrink-sleeves",
+    name: "Heat Shrink Sleeves",
+    brand: "A Leaf",
+    category: "consumables",
+    categoryLabel: CONSUMABLES,
+    description:
+      "Printable heat shrink sleeves in assorted colours and diameters for insulation and cable identification.",
+    longDescription:
+      "Heat shrink sleeves provide insulation, strain relief and permanent identification for cables and terminals. Available in multiple diameters and colours, and printable on tube printers such as the MAX LETATWIN, Canon MK series, SUPVAN and PUTY machines for durable marking that will not rub off.",
+    image: "/products/heat-shrink-sleeves.jpg",
+    features: [
+      "Assorted colours: black, red, yellow, blue and more",
+      "Wide range of diameters for cables and terminals",
+      "Printable on ferrule and tube printing machines",
+      "Shrinks tightly for insulation and strain relief",
+      "Flame retardant and abrasion resistant",
+    ],
+    specs: {
+      Type: "Heat shrink sleeve / tube",
+      Colours: "Black, Red, Yellow, Blue and assorted",
+      Application: "Insulation and cable identification",
+      Compatibility: "Tube printing machines and hot air guns",
+    },
+    featured: false,
+  },
+  {
+    id: "cable-ties",
+    name: "Cable Ties (Nylon)",
+    brand: "A Leaf",
+    category: "consumables",
+    categoryLabel: CONSUMABLES,
+    description:
+      "Nylon cable ties in black and white, available in a full range of lengths and widths for cable bundling.",
+    longDescription:
+      "Self-locking nylon cable ties for bundling, routing and securing cables in panels, machinery and installations. Supplied in black (UV resistant) and natural white in an extensive range of lengths and widths, in bulk packs for contractors and OEMs.",
+    image: "/products/cable-ties.jpg",
+    features: [
+      "Self-locking nylon 66 construction",
+      "Black (UV resistant) and natural white",
+      "Wide range of lengths and widths",
+      "High tensile strength for secure bundling",
+      "Bulk packs available",
+    ],
+    specs: {
+      Material: "Nylon 66",
+      Colours: "Black, Natural white",
+      Application: "Cable bundling, routing and securing",
+      Packing: "Bulk packs",
+    },
+    featured: false,
+  },
+
+  /* ---------------- Agricultural products (SAMSON) ---------------- */
+  {
+    id: "samson-battery-sprayer-green",
+    name: "SAMSON Battery Operated Knapsack Sprayer",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Rechargeable battery knapsack sprayer with charger, nozzle set and padded shoulder straps.",
+    longDescription:
+      "A battery operated knapsack sprayer from SAMSON Agro Equipment for spraying pesticides, herbicides and disinfectants. The rechargeable battery gives long, effortless spraying without manual pumping, and the kit is supplied complete with charger, spray lance, assorted nozzles and padded shoulder straps.",
+    image: "/products/samson-battery-sprayer-green.jpg",
+    features: [
+      "Rechargeable battery operation - no manual pumping",
+      "Complete with charger and spray lance",
+      "Assorted nozzle set included",
+      "Padded adjustable shoulder straps",
+      "Durable moulded chemical-resistant tank",
+    ],
+    specs: {
+      Type: "Battery operated knapsack sprayer",
+      Operation: "Rechargeable battery",
+      Accessories: "Charger, lance, nozzle set, shoulder straps",
+      Application: "Agriculture, horticulture, disinfection",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-battery-sprayer-yellow",
+    name: "SAMSON Battery cum Manual Knapsack Sprayer",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Dual-mode knapsack sprayer that works on rechargeable battery or manual hand lever operation.",
+    longDescription:
+      "This SAMSON knapsack sprayer can be operated on its rechargeable battery or switched to the manual hand lever pump, so spraying continues even when the battery runs down. Supplied with charger, spray lance, nozzle set and shoulder straps for comfortable all-day field use.",
+    image: "/products/samson-battery-sprayer-yellow.jpg",
+    features: [
+      "Battery and manual hand lever operation",
+      "Continues working when battery is discharged",
+      "Charger, lance and nozzle set included",
+      "Padded adjustable shoulder straps",
+      "Chemical-resistant moulded tank",
+    ],
+    specs: {
+      Type: "Battery cum manual knapsack sprayer",
+      Operation: "Rechargeable battery or manual lever",
+      Accessories: "Charger, lance, nozzle set, shoulder straps",
+      Application: "Agriculture, horticulture, disinfection",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-sam-708",
+    name: "SAMSON SAM-708 (4 Stroke) Knapsack Power Sprayer",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Petrol 4-stroke engine knapsack power sprayer for high-pressure spraying over large areas.",
+    longDescription:
+      "The SAMSON SAM-708 knapsack power sprayer is driven by a 4-stroke petrol engine for high-pressure, high-volume spraying in orchards, plantations and field crops. The back-mounted tank and engine assembly delivers strong, consistent pressure with lower fuel consumption and less smoke than 2-stroke units.",
+    image: "/products/samson-sam-708.jpg",
+    features: [
+      "4-stroke petrol engine for cleaner, quieter running",
+      "High-pressure spraying for tall crops and orchards",
+      "Back-mounted knapsack design",
+      "Robust engine frame and pump assembly",
+      "Suitable for large area coverage",
+    ],
+    specs: {
+      Model: "SAM-708 (4 Stroke)",
+      Type: "Knapsack power sprayer",
+      Engine: "4-stroke petrol engine",
+      Application: "Field crops, orchards and plantations",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-sam-pt-808",
+    name: "SAMSON SAM-PT 808 Knapsack Power Sprayer",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Engine-driven power sprayer unit with brass triple-piston pump mounted in a protective frame.",
+    longDescription:
+      "The SAMSON SAM-PT 808 is an engine-driven power sprayer unit built around a heavy-duty brass triple-piston pump, mounted in a tubular protective frame for site handling. It delivers the pressure required for spraying tall crops, orchards, pest control and washdown duties.",
+    image: "/products/samson-sam-pt-808.jpg",
+    features: [
+      "Brass triple-piston high-pressure pump",
+      "Petrol engine driven",
+      "Tubular protective carry frame",
+      "Suitable for spraying and washdown duties",
+      "Heavy-duty construction for continuous use",
+    ],
+    specs: {
+      Model: "SAM-PT 808",
+      Type: "Knapsack power sprayer unit",
+      Pump: "Brass triple-piston high-pressure pump",
+      Application: "Orchards, plantations, pest control, washdown",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-fogging-machine",
+    name: "SAMSON Thermal Fogging Machine",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Pulse-jet thermal fogger with twin chemical tanks for pest control and large-area disinfection.",
+    longDescription:
+      "A pulse-jet thermal fogging machine that converts chemical solution into a dense fog for rapid coverage of large areas. Used for mosquito and insect control, warehouse and poultry-shed treatment, greenhouse spraying and public health disinfection. Twin tanks allow chemical and fuel to be carried together for extended running.",
+    image: "/products/samson-fogging-machine.jpg",
+    features: [
+      "Pulse-jet thermal fogging for dense fog output",
+      "Twin tank design for extended operation",
+      "Stainless steel barrel with protective guard",
+      "Rapid coverage of large indoor and outdoor areas",
+      "For mosquito control, disinfection and crop protection",
+    ],
+    specs: {
+      Type: "Thermal fogging machine",
+      Technology: "Pulse-jet",
+      Application: "Pest control, disinfection, greenhouse and poultry sheds",
+      Operation: "Petrol fuelled, portable",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-mini-fogger",
+    name: "SAMSON Portable Mini Fogging Machine",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Compact hand-held fogger for killing mosquitoes, flies, cockroaches and other insects indoors.",
+    longDescription:
+      "A compact, light hand-held fogging machine designed for indoor and small-area treatment. Effective against mosquitoes, black flies, deer flies, cockroaches, moths and wasps, it is easy to carry and operate around homes, shops, offices, godowns and cattle sheds.",
+    image: "/products/samson-mini-fogger.jpg",
+    features: [
+      "Compact, light hand-held design",
+      "Kills mosquitoes, flies, cockroaches, moths and wasps",
+      "Ideal for indoor and small-area treatment",
+      "Simple operation with detachable chemical bottle",
+      "Supplied in retail packaging",
+    ],
+    specs: {
+      Type: "Portable mini fogging machine",
+      Application: "Homes, shops, godowns, cattle sheds",
+      Targets: "Mosquitoes, black flies, deer flies, cockroaches, moths, wasps",
+      Handling: "Hand-held, portable",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-htp-pump",
+    name: "SAMSON HTP Power Sprayer Pump",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "High-pressure triple-piston HTP pump with pressure gauge and pulley drive for sprayer systems.",
+    longDescription:
+      "A high-tech pressure (HTP) triple-piston sprayer pump with brass head, pressure gauge and regulator. Pulley driven from an electric motor or engine, it is used for orchard and field spraying, whitewashing and high-pressure washing installations.",
+    image: "/products/samson-htp-pump.jpg",
+    features: [
+      "Triple-piston brass pump head",
+      "Built-in pressure gauge and regulator",
+      "Pulley drive for motor or engine coupling",
+      "Stainless pressure chamber",
+      "For orchard spraying, whitewashing and washing",
+    ],
+    specs: {
+      Type: "HTP triple-piston power sprayer pump",
+      Drive: "Pulley driven by electric motor or engine",
+      Fittings: "Pressure gauge, regulator, pressure chamber",
+      Application: "Orchard and field spraying, high-pressure washing",
+    },
+    featured: false,
+  },
+  {
+    id: "samson-sprayer-spares",
+    name: "SAMSON Sprayer Spares & Accessories",
+    brand: "SAMSON",
+    category: "agriculture",
+    categoryLabel: AGRICULTURE,
+    description:
+      "Replacement nozzles, discs, seals, trolley frames and fittings for SAMSON sprayers and foggers.",
+    longDescription:
+      "A full range of genuine spares and accessories to keep SAMSON sprayers and fogging machines in service, including spray nozzles, nozzle discs, seals and washers, hose fittings, lances and trolley frames. Stocked and supplied by A Leaf Electricals & Electronics.",
+    image: "/products/samson-sprayer-spares.jpg",
+    features: [
+      "Spray nozzles and nozzle discs",
+      "Seals, washers and O-rings",
+      "Hose fittings and spray lances",
+      "Trolley frames and mounting hardware",
+      "Genuine SAMSON replacement parts",
+    ],
+    specs: {
+      Type: "Spares and accessories",
+      Includes: "Nozzles, discs, seals, fittings, lances, trolley frames",
+      Compatibility: "SAMSON sprayers and fogging machines",
+    },
+    featured: false,
+  },
 ];
+
 
 export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
