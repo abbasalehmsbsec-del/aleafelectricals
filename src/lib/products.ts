@@ -1,4 +1,9 @@
-export type ProductCategory = "machines" | "printers" | "consumables";
+export type ProductCategory =
+  | "machines"
+  | "printers"
+  | "consumables"
+  | "agriculture";
+
 
 export interface Product {
   id: string;
