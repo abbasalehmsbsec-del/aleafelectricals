@@ -4,7 +4,7 @@ import {
   getProductsByCategory,
   type ProductCategory,
 } from "../lib/products";
-import { Printer, ChevronRight, Zap } from "lucide-react";
+import { Printer, ChevronRight, Zap, Sprout } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
