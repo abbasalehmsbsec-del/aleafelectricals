@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 text-foreground">
-              <Printer className="h-5 w-5 text-primary" />
+              <img src={logoAsset.url} alt="A Leaf Electricals & Electronics logo" className="h-8 w-8 object-contain" />
               <span className="flex flex-col leading-tight">
                 <span className="font-display text-lg font-bold tracking-tight">
                   A LEAF
