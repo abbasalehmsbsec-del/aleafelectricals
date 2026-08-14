@@ -3,6 +3,8 @@ import { useState } from "react";
 import { products, brands, type ProductCategory } from "../lib/products";
 import { ChevronRight, Filter } from "lucide-react";
 
+const SITE_URL = "https://aleafelectricals.lovable.app";
+
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
@@ -20,6 +22,31 @@ export const Route = createFileRoute("/products/")({
         property: "og:description",
         content:
           "Browse ferrule printing machines, label printers and consumables from Brother, MAX, Canon, CASIO, DYMO, SUPVAN and PUTY.",
+      },
+      { property: "og:url", content: `${SITE_URL}/products` },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/products` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Products | A Leaf Electricals & Electronics",
+          url: `${SITE_URL}/products`,
+          description:
+            "Catalogue of ferrule printing machines, industrial label printers, consumables and agricultural spraying equipment.",
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: products.length,
+            itemListElement: products.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.name,
+              url: `${SITE_URL}/products/${p.id}`,
+            })),
+          },
+        }),
       },
     ],
   }),
