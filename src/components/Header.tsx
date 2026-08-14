@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Printer } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoAsset from "../assets/a-leaf-logo.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
