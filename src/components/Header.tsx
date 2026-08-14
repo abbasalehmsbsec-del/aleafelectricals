@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Printer } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoAsset from "../assets/a-leaf-logo.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -17,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 text-foreground">
-          <Printer className="h-6 w-6 text-primary" />
+          <img src={logoAsset.url} alt="A Leaf Electricals & Electronics logo" className="h-9 w-9 object-contain" />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-base font-bold tracking-tight sm:text-lg">
               A LEAF

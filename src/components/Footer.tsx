@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Printer, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logoAsset from "../assets/a-leaf-logo.png.asset.json";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 text-foreground">
-              <Printer className="h-5 w-5 text-primary" />
+              <img src={logoAsset.url} alt="A Leaf Electricals & Electronics logo" className="h-8 w-8 object-contain" />
               <span className="flex flex-col leading-tight">
                 <span className="font-display text-lg font-bold tracking-tight">
                   A LEAF
