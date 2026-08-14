@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Printer, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logoAsset from "../assets/a-leaf-logo.png.asset.json";
 
 export function Footer() {
   return (
