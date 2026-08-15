@@ -9,21 +9,55 @@ export const Route = createFileRoute("/products/$productId")({
     if (!product) throw notFound();
     return { product };
   },
-  head: ({ loaderData }) => ({
+  head: ({ params, loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.product.name} | A Leaf Electricals & Electronics` },
+          { title: `${loaderData.product.name} | A Leaf` },
           {
             name: "description",
             content: loaderData.product.description,
           },
           {
             property: "og:title",
-            content: `${loaderData.product.name} | A Leaf Electricals & Electronics`,
+            content: `${loaderData.product.name} | A Leaf`,
           },
           {
             property: "og:description",
             content: loaderData.product.description,
+          },
+          { property: "og:type", content: "product" },
+          { property: "og:url", content: `${SITE_URL}/products/${params.productId}` },
+        ]
+      : [],
+    links: loaderData
+      ? [{ rel: "canonical", href: `${SITE_URL}/products/${params.productId}` }]
+      : [],
+    scripts: loaderData
+      ? [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: loaderData.product.name,
+              brand: { "@type": "Brand", name: loaderData.product.brand },
+              category: loaderData.product.categoryLabel,
+              image: `${SITE_URL}${loaderData.product.image}`,
+              description: loaderData.product.longDescription,
+              url: `${SITE_URL}/products/${params.productId}`,
+              additionalProperty: [
+                ...Object.entries(loaderData.product.specs).map(([name, value]) => ({
+                  "@type": "PropertyValue",
+                  name,
+                  value,
+                })),
+                ...loaderData.product.features.map((feature) => ({
+                  "@type": "PropertyValue",
+                  name: "Feature",
+                  value: feature,
+                })),
+              ],
+            }),
           },
         ]
       : [],
