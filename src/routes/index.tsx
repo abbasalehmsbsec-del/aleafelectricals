@@ -6,10 +6,12 @@ import {
 } from "../lib/products";
 import { Printer, ChevronRight, Zap, Sprout } from "lucide-react";
 
+const SITE_URL = "https://aleafelectricals.lovable.app";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
+      { title: "Ferrule Printers & Label Machines | A Leaf" },
       {
         name: "description",
         content:
@@ -17,12 +19,53 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions",
+        content: "Ferrule Printers & Label Machines | A Leaf",
       },
       {
         property: "og:description",
         content:
           "Leading supplier of ferrule printing machines, industrial label printers, and consumables for wire harness and cable management.",
+      },
+      { property: "og:url", content: `${SITE_URL}/` },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "A Leaf Electricals & Electronics",
+          url: SITE_URL,
+          image: `${SITE_URL}/favicon.png`,
+          description:
+            "Supplier of ferrule printing machines, industrial label printers, consumables and agricultural spraying equipment.",
+          telephone: ["+919177752786", "+916302174819"],
+          email: "aleafelectricals@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Behind Anjiyah Complex, Old Bhoiguda",
+            addressLocality: "Secunderabad",
+            addressRegion: "Telangana",
+            postalCode: "500003",
+            addressCountry: "IN",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+              ],
+              opens: "10:00",
+              closes: "20:00",
+            },
+          ],
+        }),
       },
     ],
   }),

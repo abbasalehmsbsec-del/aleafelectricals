@@ -20,7 +20,9 @@ export const Route = createFileRoute("/contact")({
         content:
           "Get in touch with A Leaf Electricals & Electronics for quotes, demos, product support, and sales inquiries.",
       },
+      { property: "og:url", content: "https://aleafelectricals.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://aleafelectricals.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

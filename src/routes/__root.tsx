@@ -79,9 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
+      { title: "A Leaf Electricals & Electronics" },
       { name: "description", content: "Precision ferrule printing machines, industrial label printers, and consumables for wire harness, cable management, and electrical identification." },
-      { property: "og:title", content: "A Leaf Electricals & Electronics | Ferrule Printing & Labeling Solutions" },
+      { property: "og:site_name", content: "A Leaf Electricals & Electronics" },
+      { property: "og:title", content: "A Leaf Electricals & Electronics" },
       { property: "og:description", content: "Precision ferrule printing machines, industrial label printers, and consumables for wire harness, cable management, and electrical identification." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
