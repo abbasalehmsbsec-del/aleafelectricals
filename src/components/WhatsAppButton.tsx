@@ -19,7 +19,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function WhatsAppButton() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const params = useRouterState({ select: (s) => s.params }) as Record<string, string | undefined>;
+  const params = useParams({ strict: false }) as Record<string, string | undefined>;
 
   let message = "Hi A Leaf Electricals, I would like to inquire about your products";
 
