@@ -3,6 +3,8 @@ import { notFound } from "@tanstack/react-router";
 import { getProductById, type Product } from "../lib/products";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 
+const SITE_URL = "https://aleafelectricals.lovable.app";
+
 export const Route = createFileRoute("/products/$productId")({
   loader: ({ params }) => {
     const product = getProductById(params.productId);
