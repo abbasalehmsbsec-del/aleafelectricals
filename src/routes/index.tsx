@@ -4,7 +4,7 @@ import {
   getProductsByCategory,
   type ProductCategory,
 } from "../lib/products";
-import { Printer, ChevronRight, Zap, Sprout } from "lucide-react";
+import { Printer, ChevronRight, Zap, Sprout, ShieldCheck, Sparkles, Headset } from "lucide-react";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
@@ -98,6 +98,16 @@ const categories: { key: ProductCategory; title: string; description: string; ic
     icon: Sprout,
   },
 ];
+
+const badges = [
+  { icon: ShieldCheck, label: "Authorized Dealer" },
+  { icon: Sparkles, label: "Genuine Products" },
+  { icon: Headset, label: "Expert Support" },
+];
+
+
+
+
 
 
 
