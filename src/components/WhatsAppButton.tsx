@@ -1,4 +1,4 @@
-import { useRouterState } from "@tanstack/react-router";
+import { useRouterState, useParams } from "@tanstack/react-router";
 import { getProductById } from "../lib/products";
 
 const PHONE_NUMBER = "919177752786";
