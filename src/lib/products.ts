@@ -449,8 +449,8 @@ export const products: Product[] = [
     id: "brother-pt-e850tkw",
     name: "Brother PT-E850TKW",
     brand: "Brother",
-    category: "printers",
-    categoryLabel: PRINTERS,
+    category: "machines",
+    categoryLabel: MACHINES,
     description:
       "Dual tube and label printer at 360 dpi for heavy-duty cable identification, up to 36 mm tape.",
     longDescription:
