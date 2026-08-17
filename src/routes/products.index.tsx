@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { products, brands, type ProductCategory } from "../lib/products";
 import { ChevronRight, Filter } from "lucide-react";
+import { Reveal } from "../components/Reveal";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
@@ -124,10 +125,10 @@ function ProductsPage() {
 
       {/* Grid */}
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((product) => (
+        {filtered.map((product, i) => (
+          <Reveal key={product.id} delay={(i % 3) * 80}>
           <div
-            key={product.id}
-            className="group overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/50"
+            className="glass glow-hover group h-full overflow-hidden rounded-2xl"
           >
             <div className="aspect-[4/3] overflow-hidden bg-muted">
               <img
@@ -163,13 +164,14 @@ function ProductsPage() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="rounded-md bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
+                  className="rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
                 >
                   Request Quote
                 </Link>
               </div>
             </div>
           </div>
+          </Reveal>
         ))}
       </div>
 
