@@ -5,6 +5,11 @@ import {
   type ProductCategory,
 } from "../lib/products";
 import { Printer, ChevronRight, Zap, Sprout, ShieldCheck, Sparkles, Headset } from "lucide-react";
+import { Reveal } from "../components/Reveal";
+import { CountUp } from "../components/CountUp";
+import { TiltBadge } from "../components/TiltBadge";
+import { Testimonials } from "../components/Testimonials";
+import { QuoteBuilder } from "../components/QuoteBuilder";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
