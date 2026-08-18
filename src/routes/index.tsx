@@ -10,6 +10,7 @@ import { CountUp } from "../components/CountUp";
 import { TiltBadge } from "../components/TiltBadge";
 import { Testimonials } from "../components/Testimonials";
 import { QuoteBuilder } from "../components/QuoteBuilder";
+import { BrandMarquee } from "../components/BrandMarquee";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
@@ -176,6 +177,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Brand logos */}
+      <BrandMarquee />
 
       {/* Trust badges */}
       <section className="border-y border-border/60 bg-card/60">

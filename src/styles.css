@@ -215,3 +215,16 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+@keyframes brand-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility brand-track {
+  animation: brand-marquee 32s linear infinite;
+}
