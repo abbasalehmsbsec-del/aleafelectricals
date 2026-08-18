@@ -31,21 +31,26 @@ export function BrandMarquee() {
       </div>
 
       <div className="group relative mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-        <div className="brand-track flex w-max items-center gap-14 pr-14 group-hover:[animation-play-state:paused]">
+        <div className="brand-track flex w-max items-center gap-8 pr-8 group-hover:[animation-play-state:paused] sm:gap-10 sm:pr-10">
           {[0, 1].map((dup) => (
-            <div key={dup} className="flex items-center gap-14" aria-hidden={dup === 1}>
+            <div key={dup} className="flex items-center gap-8 sm:gap-10" aria-hidden={dup === 1}>
               {brands.map((b) => (
-                <img
+                <span
                   key={`${dup}-${b.name}`}
-                  src={b.src}
-                  alt={`${b.name} logo`}
-                  loading="lazy"
-                  className="h-10 w-auto max-w-[150px] shrink-0 object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 sm:h-12"
-                />
+                  className="flex h-16 shrink-0 items-center justify-center rounded-2xl bg-white px-5 shadow-sm transition duration-300 hover:scale-105 sm:h-20 sm:px-7"
+                >
+                  <img
+                    src={b.src}
+                    alt={`${b.name} logo`}
+                    loading="lazy"
+                    className="h-8 w-auto max-w-[140px] object-contain sm:h-10 sm:max-w-[170px]"
+                  />
+                </span>
               ))}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
