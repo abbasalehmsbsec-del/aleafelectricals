@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Cable, Check, Search } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Cable, Check, Info, Ruler, Search } from "lucide-react";
 import { products } from "../lib/products";
 
 const machines = products.filter(
@@ -122,6 +122,20 @@ const compatibility: Record<
   },
 };
 
+function needsSizeConfirmation(product: (typeof products)[number]) {
+  const name = product.name.toLowerCase();
+  const category = product.category.toLowerCase();
+  return (
+    category === "consumables" &&
+    (name.includes("sleeve") ||
+      name.includes("tube") ||
+      name.includes("heat-shrink") ||
+      name.includes("heat shrink") ||
+      name.includes("pvc") ||
+      name.includes("ferrule"))
+  );
+}
+
 export function ConsumablesFinder() {
   const [selectedMachineId, setSelectedMachineId] = useState(machines[0]?.id ?? "");
   const selectedMachine = machines.find((machine) => machine.id === selectedMachineId);
@@ -185,13 +199,21 @@ export function ConsumablesFinder() {
               </select>
             </div>
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-              Matches follow the compatibility information in our product catalogue. For generic sleeves, please confirm the required diameter and width with our team.
+              Matches follow the compatibility information in our product catalogue. For sleeves and tubes, please confirm the required diameter and width with our team.
             </p>
           </div>
 
           <div aria-live="polite">
             {selectedMachine && match && matchedProducts.length > 0 ? (
               <>
+                <div className="mb-5 flex items-start gap-3 rounded-xl border border-amber-500/25 bg-amber-500/10 p-4">
+                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                  <p className="text-xs leading-relaxed text-foreground/90">
+                    <span className="font-semibold">Compatibility disclaimer:</span>{" "}
+                    These matches are based on the specifications listed in our catalogue. Ribbons and tapes are model-specific; sleeves, tubes and label rolls require the correct diameter, width and core size. Please verify the exact fit with our team before placing your order.
+                  </p>
+                </div>
+
                 <div className="mb-5 flex items-end justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
@@ -211,8 +233,14 @@ export function ConsumablesFinder() {
                       key={product.id}
                       to="/products/$productId"
                       params={{ productId: product.id }}
-                      className="glass glow-hover group flex gap-4 rounded-2xl p-4"
+                      className="glass glow-hover group relative flex gap-4 rounded-2xl p-4"
                     >
+                      {needsSizeConfirmation(product) && (
+                        <span className="absolute -right-1.5 -top-2 inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/15 px-2 py-0.5 text-[10px] font-semibold text-amber-300 shadow-sm backdrop-blur-sm">
+                          <Ruler className="h-3 w-3" />
+                          Confirm size
+                        </span>
+                      )}
                       <div className="h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-muted">
                         <img
                           src={product.image}
@@ -242,6 +270,12 @@ export function ConsumablesFinder() {
               </>
             ) : (
               <div className="glass rounded-2xl p-6">
+                <div className="mb-4 flex items-start gap-3 rounded-xl border border-amber-500/25 bg-amber-500/10 p-4">
+                  <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                  <p className="text-xs leading-relaxed text-foreground/90">
+                    <span className="font-semibold">No match found.</span> We do not currently list a dedicated consumable for this model. Contact us to confirm the correct ribbon, tape or sleeve size before ordering.
+                  </p>
+                </div>
                 <p className="text-sm font-semibold text-foreground">
                   No dedicated consumable is listed for this model yet.
                 </p>
