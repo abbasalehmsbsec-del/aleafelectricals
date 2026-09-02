@@ -51,13 +51,17 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
+          "@id": `${SITE_URL}/#business`,
           name: "A Leaf Electricals & Electronics",
+          alternateName: "A Leaf Electricals",
           url: SITE_URL,
           image: `${SITE_URL}/favicon.png`,
           description:
-            "Supplier of ferrule printing machines, industrial label printers, consumables and agricultural spraying equipment.",
+            "Authorized ferrule printing machine dealer in Secunderabad, Hyderabad — Brother industrial label printer supplier, MAX Letatwin, Canon, SUPVAN, CASIO, DYMO and PUTY dealer with genuine ribbons, tapes and ferrule sleeves.",
           telephone: ["+919177752786", "+916302174819"],
           email: "aleafelectricals@gmail.com",
+          priceRange: "₹₹",
+          currenciesAccepted: "INR",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Behind Anjiyah Complex, Old Bhoiguda",
@@ -66,6 +70,24 @@ export const Route = createFileRoute("/")({
             postalCode: "500003",
             addressCountry: "IN",
           },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 17.4399,
+            longitude: 78.4983,
+          },
+          areaServed: [
+            { "@type": "City", name: "Hyderabad" },
+            { "@type": "City", name: "Secunderabad" },
+            { "@type": "State", name: "Telangana" },
+          ],
+          knowsAbout: [
+            "Ferrule printing machines",
+            "Industrial label printers",
+            "Brother label printer supplies",
+            "MAX Letatwin ribbon and tube",
+            "PVC ferrule sleeves",
+            "Heat shrink sleeves",
+          ],
           openingHoursSpecification: [
             {
               "@type": "OpeningHoursSpecification",
