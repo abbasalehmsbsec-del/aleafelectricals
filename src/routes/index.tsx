@@ -18,20 +18,29 @@ const SITE_URL = "https://aleafelectricals.lovable.app";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ferrule Printers & Label Machines | A Leaf" },
+      {
+        title:
+          "Ferrule Printing Machine Dealer in Hyderabad | A Leaf Electricals",
+      },
       {
         name: "description",
         content:
-          "Leading supplier of ferrule printing machines, industrial label printers, and consumables for wire harness and cable management.",
+          "A Leaf Electricals & Electronics — authorized ferrule printing machine dealer in Secunderabad, Hyderabad. Brother industrial label printer supplier, MAX, Canon, SUPVAN dealers with genuine consumables.",
+      },
+      {
+        name: "keywords",
+        content:
+          "ferrule printing machine dealer in Hyderabad, Brother industrial label printer supplier, ferrule printer Secunderabad, MAX Letatwin dealer Hyderabad, Canon ferrule printer supplier, label printer consumables Hyderabad, SUPVAN dealer Telangana",
       },
       {
         property: "og:title",
-        content: "Ferrule Printers & Label Machines | A Leaf",
+        content:
+          "Ferrule Printing Machine Dealer in Hyderabad | A Leaf Electricals",
       },
       {
         property: "og:description",
         content:
-          "Leading supplier of ferrule printing machines, industrial label printers, and consumables for wire harness and cable management.",
+          "Authorized dealer of ferrule printing machines, Brother industrial label printers, and genuine consumables in Secunderabad, Hyderabad.",
       },
       { property: "og:url", content: `${SITE_URL}/` },
     ],
