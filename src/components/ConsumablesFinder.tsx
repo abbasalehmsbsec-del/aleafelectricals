@@ -122,6 +122,20 @@ const compatibility: Record<
   },
 };
 
+function needsSizeConfirmation(product: (typeof products)[number]) {
+  const name = product.name.toLowerCase();
+  const category = product.category.toLowerCase();
+  return (
+    category === "consumables" &&
+    (name.includes("sleeve") ||
+      name.includes("tube") ||
+      name.includes("heat-shrink") ||
+      name.includes("heat shrink") ||
+      name.includes("pvc") ||
+      name.includes("ferrule"))
+  );
+}
+
 export function ConsumablesFinder() {
   const [selectedMachineId, setSelectedMachineId] = useState(machines[0]?.id ?? "");
   const selectedMachine = machines.find((machine) => machine.id === selectedMachineId);
