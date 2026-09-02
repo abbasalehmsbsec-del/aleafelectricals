@@ -47,6 +47,32 @@ export const Route = createFileRoute("/products/$productId")({
               image: `${SITE_URL}${loaderData.product.image}`,
               description: loaderData.product.longDescription,
               url: `${SITE_URL}/products/${params.productId}`,
+              offers: {
+                "@type": "Offer",
+                url: `${SITE_URL}/products/${params.productId}`,
+                priceCurrency: "INR",
+                availability: "https://schema.org/InStock",
+                itemCondition: "https://schema.org/NewCondition",
+                areaServed: [
+                  { "@type": "City", name: "Hyderabad" },
+                  { "@type": "City", name: "Secunderabad" },
+                  { "@type": "State", name: "Telangana" },
+                ],
+                seller: {
+                  "@type": "LocalBusiness",
+                  "@id": `${SITE_URL}/#business`,
+                  name: "A Leaf Electricals & Electronics",
+                  telephone: "+919177752786",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "Behind Anjiyah Complex, Old Bhoiguda",
+                    addressLocality: "Secunderabad",
+                    addressRegion: "Telangana",
+                    postalCode: "500003",
+                    addressCountry: "IN",
+                  },
+                },
+              },
               additionalProperty: [
                 ...Object.entries(loaderData.product.specs).map(([name, value]) => ({
                   "@type": "PropertyValue",
