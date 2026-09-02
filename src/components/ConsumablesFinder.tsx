@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Cable, Check, Search } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Cable, Check, Info, Ruler, Search } from "lucide-react";
 import { products } from "../lib/products";
 
 const machines = products.filter(
