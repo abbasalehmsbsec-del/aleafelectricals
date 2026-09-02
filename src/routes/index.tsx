@@ -11,6 +11,7 @@ import { TiltBadge } from "../components/TiltBadge";
 import { Testimonials } from "../components/Testimonials";
 import { QuoteBuilder } from "../components/QuoteBuilder";
 import { BrandMarquee } from "../components/BrandMarquee";
+import { ConsumablesFinder } from "../components/ConsumablesFinder";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
@@ -318,6 +319,9 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Consumables finder */}
+      <ConsumablesFinder />
 
       {/* Testimonials */}
       <Testimonials />
