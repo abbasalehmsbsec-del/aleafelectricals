@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, Landmark, Navigation } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -277,6 +277,67 @@ function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Map & Landmarks */}
+      <section className="border-t border-border bg-secondary/30">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-foreground">
+              Find Us in Old Bhoiguda, Secunderabad
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Walk in for demos and purchases, or coordinate local dispatch and pickups at our store.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-8 lg:grid-cols-3">
+            <div className="overflow-hidden rounded-xl border border-border lg:col-span-2">
+              <iframe
+                title="A Leaf Electricals & Electronics — Old Bhoiguda, Secunderabad"
+                src="https://maps.google.com/maps?q=Old%20Bhoiguda%2C%20Secunderabad%2C%20Telangana%20500003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="h-[380px] w-full sm:h-[440px]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold text-foreground">
+                <Landmark className="h-5 w-5 text-primary" />
+                Nearby Landmarks
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {[
+                  { name: "Secunderabad Railway Station", hint: "Major rail hub — approx. 2 km" },
+                  { name: "Secunderabad Clock Tower", hint: "Central landmark — approx. 1.5 km" },
+                  { name: "SP Road electronics market", hint: "Approx. 2 km" },
+                  { name: "Paradise Circle", hint: "Approx. 2.5 km" },
+                  { name: "MG Bus Station (Imlibun)", hint: "Across the Musi — approx. 5 km" },
+                ].map((l) => (
+                  <li key={l.name} className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{l.name}</p>
+                      <p className="text-xs text-muted-foreground">{l.hint}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Old+Bhoiguda,+Secunderabad,+Telangana+500003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                <Navigation className="h-4 w-4" />
+                Get Directions
+              </a>
+              <p className="mt-4 text-xs text-muted-foreground">
+                Call ahead for dispatch coordination or bulk pickups: +91 91777 52786.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
