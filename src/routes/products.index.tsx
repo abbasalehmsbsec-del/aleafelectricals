@@ -63,14 +63,51 @@ const filters: { key: ProductCategory | "all"; label: string }[] = [
 
 ];
 
+type Connectivity = "pc-usb" | "bluetooth" | "standalone";
+
+const connectivityFilters: { key: Connectivity | "all"; label: string }[] = [
+  { key: "all", label: "Any Connectivity" },
+  { key: "pc-usb", label: "PC / USB" },
+  { key: "bluetooth", label: "Bluetooth / Wireless" },
+  { key: "standalone", label: "Standalone" },
+];
+
+/** Connectivity classification for machines & printers (consumables/agri are unaffected). */
+const connectivityById: Record<string, Connectivity> = {
+  "max-lm-550a-pc": "pc-usb",
+  "canon-mk-3000": "pc-usb",
+  "canon-mk-5000": "pc-usb",
+  "supvan-tp-70e": "standalone",
+  "supvan-tp-76e": "pc-usb",
+  "puty-pt-1010": "standalone",
+  "puty-p-900": "pc-usb",
+  "brother-pt-d610bt": "bluetooth",
+  "brother-pt-h105": "standalone",
+  "brother-pt-d210": "standalone",
+  "brother-pt-e110vp": "standalone",
+  "brother-pt-e550wvp": "bluetooth",
+  "brother-pt-e850tkw": "bluetooth",
+  "brother-ql-800": "pc-usb",
+  "brother-pt-p900w": "bluetooth",
+  "brother-ql-810w": "bluetooth",
+  "brother-ql-820nwb": "bluetooth",
+  "casio-kl-820": "standalone",
+  "casio-kl-hd1": "standalone",
+  "dymo-lm-280": "pc-usb",
+  "dymo-lm-160": "standalone",
+  "dymo-lm-420p": "pc-usb",
+};
+
 function ProductsPage() {
   const [activeFilter, setActiveFilter] = useState<ProductCategory | "all">("all");
   const [activeBrand, setActiveBrand] = useState<string>("all");
+  const [activeConnectivity, setActiveConnectivity] = useState<Connectivity | "all">("all");
 
   const filtered = products.filter(
     (p) =>
       (activeFilter === "all" || p.category === activeFilter) &&
-      (activeBrand === "all" || p.brand === activeBrand),
+      (activeBrand === "all" || p.brand === activeBrand) &&
+      (activeConnectivity === "all" || connectivityById[p.id] === activeConnectivity),
   );
 
 
