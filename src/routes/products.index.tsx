@@ -59,8 +59,6 @@ const filters: { key: ProductCategory | "all"; label: string }[] = [
   { key: "machines", label: "Ferrule Machines" },
   { key: "printers", label: "Label Printers" },
   { key: "consumables", label: "Consumables" },
-  { key: "agriculture", label: "Agricultural Equipment" },
-
 ];
 
 type Connectivity = "pc-usb" | "bluetooth" | "standalone";
@@ -103,8 +101,10 @@ function ProductsPage() {
   const [activeBrand, setActiveBrand] = useState<string>("all");
   const [activeConnectivity, setActiveConnectivity] = useState<Connectivity | "all">("all");
 
+  // Agricultural equipment has its own dedicated tab (/agriculture).
   const filtered = products.filter(
     (p) =>
+      p.category !== "agriculture" &&
       (activeFilter === "all" || p.category === activeFilter) &&
       (activeBrand === "all" || p.brand === activeBrand) &&
       (activeConnectivity === "all" || connectivityById[p.id] === activeConnectivity),
