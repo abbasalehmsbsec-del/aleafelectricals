@@ -49,7 +49,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Behind Anjiyah Complex, Old Bhoiguda, Secunderabad 500003",
+    value: "# 4-3-243 & 244/1, 1st Floor, Andal Plaza, Old Bhoiguda, Secunderabad - 3, T.S. 500003",
     href: undefined,
   },
   {
