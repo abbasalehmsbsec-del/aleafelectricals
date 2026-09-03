@@ -157,6 +157,26 @@ function ProductsPage() {
         ))}
       </div>
 
+      {/* Connectivity filters */}
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+        <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          Connectivity:
+        </span>
+        {connectivityFilters.map((c) => (
+          <button
+            key={c.key}
+            onClick={() => setActiveConnectivity(c.key)}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              activeConnectivity === c.key
+                ? "border-primary bg-primary/10 text-primary"
+                : "border-border text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {c.label}
+          </button>
+        ))}
+      </div>
+
 
 
 
