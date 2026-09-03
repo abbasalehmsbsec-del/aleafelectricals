@@ -6,7 +6,7 @@ import logoAsset from "../assets/a-leaf-logo.png.asset.json";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
-  
+  { to: "/agriculture", label: "Agriculture" },
   { to: "/contact", label: "Contact" },
 ];
 

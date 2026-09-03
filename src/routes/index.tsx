@@ -129,12 +129,6 @@ const categories: { key: ProductCategory; title: string; description: string; ic
     description: "Ferrule sleeves, heat shrink sleeves, thermal ribbons, label tapes and cable ties.",
     icon: ChevronRight,
   },
-  {
-    key: "agriculture",
-    title: "Agricultural Equipment",
-    description: "SAMSON knapsack sprayers, power sprayers, fogging machines, HTP pumps and spares.",
-    icon: Sprout,
-  },
 ];
 
 const badges = [
