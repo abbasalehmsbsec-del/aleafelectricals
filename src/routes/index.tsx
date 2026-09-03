@@ -64,7 +64,7 @@ export const Route = createFileRoute("/")({
           currenciesAccepted: "INR",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Behind Anjiyah Complex, Old Bhoiguda",
+            streetAddress: "# 4-3-243 & 244/1, 1st Floor, Andal Plaza, Old Bhoiguda",
             addressLocality: "Secunderabad",
             addressRegion: "Telangana",
             postalCode: "500003",

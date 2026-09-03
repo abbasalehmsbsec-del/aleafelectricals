@@ -89,8 +89,9 @@ export function Footer() {
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span>
-                  Behind Anjiyah Complex,<br />
-                  Old Bhoiguda, Secunderabad 500003
+                  # 4-3-243 &amp; 244/1, 1st Floor,<br />
+                  Andal Plaza, Old Bhoiguda,<br />
+                  Secunderabad - 3, T.S. 500003
                 </span>
               </li>
 
