@@ -139,7 +139,10 @@ function Cell({ value, highlight }: { value: string | boolean; highlight: boolea
 }
 
 export function MachineCompare() {
-  const [selected, setSelected] = useState<string[]>(MACHINES.map((m) => m.id));
+  const [selected, setSelected] = useState<string[]>([
+    MACHINES[0].id,
+    MACHINES[3].id,
+  ]);
 
   const active = useMemo(
     () => MACHINES.filter((m) => selected.includes(m.id)),
@@ -152,7 +155,7 @@ export function MachineCompare() {
         ? prev.length > 2
           ? prev.filter((x) => x !== id)
           : prev
-        : prev.length < 4
+        : prev.length < 3
           ? [...prev, id]
           : prev
     );
@@ -174,8 +177,8 @@ export function MachineCompare() {
               Ferrule Machine Comparison
             </h2>
             <p className="mt-2 max-w-2xl text-muted-foreground">
-              Side-by-side specs of the four machines panel shops ask about
-              most. Tap a machine to add or remove it from the table.
+              Pick any 2 or 3 machines below to compare their specs
+              side-by-side. Tap a machine to add or remove it from the table.
             </p>
           </div>
         </div>
