@@ -12,6 +12,7 @@ import { Testimonials } from "../components/Testimonials";
 import { QuoteBuilder } from "../components/QuoteBuilder";
 import { BrandMarquee } from "../components/BrandMarquee";
 import { ConsumablesFinder } from "../components/ConsumablesFinder";
+import { MachineCompare } from "../components/MachineCompare";
 
 const SITE_URL = "https://aleafelectricals.lovable.app";
 
@@ -346,6 +347,8 @@ function HomePage() {
       </section>
 
       {/* Consumables finder */}
+      <MachineCompare />
+
       <ConsumablesFinder />
 
       {/* Testimonials */}
